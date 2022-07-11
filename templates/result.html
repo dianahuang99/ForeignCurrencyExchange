@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %}Hello{% endblock %} {% block content
+%}
+<p>
+  If you convert {{from_currency_symbol}}{{amount}} from
+  {{converting_from.upper()}} to {{converting_to.upper()}}:
+</p>
+<p>The result is {{to_currency_symbol}}{{converted_amount}}.</p>
+
+<div>
+  <a href="/"><button>Home</button></a>
+  {% endblock %}
+</div>

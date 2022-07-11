@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}Hello{% endblock %} {% block content
+%} {% with messages = get_flashed_messages(with_categories=true)%} {%if
+messages%}
+<section class="messages">
+  {% for category, msg in messages %}
+  <br />
+  <p class="{{category}}">{{msg}}</p>
+
+  <br />
+  {% endfor %}
+</section>
+</br>
+{%endif%} {%endwith%}
+
+<h1>Foreign Currency Exchange</h1>
+<form action="/result" method="post">
+  <label for="from">Converting from </label>
+  <input type="text" name="converting_from" placeholder="3 letter currency" />
+  <br />
+  <label for="to">Converting to </label>
+  <input type="text" name="converting_to" placeholder="3 letter currency" />
+
+  <br />
+  <label for="amount">Amount</label>
+  <input type="text" name="amount" placeholder="amount" />
+
+  <br />
+  <button>Convert</button>
+</form>
+{% endblock %}

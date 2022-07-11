@@ -1,0 +1,18 @@
+.error {
+  background-color: red;
+  padding: 5px;
+  color: white;
+  display: inline;
+}
+
+.messages {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
+button {
+  font-size: 20px;
+}
